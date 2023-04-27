@@ -3,13 +3,13 @@ const inquirer = require('inquirer');
 class Options {
     constructor(){
         this.newDepartment =
-         [
-    {
-        name: 'AddDepartment',
-        message: 'Please enter the name of the new department',
-        type: 'input',
-    },
-         ]
+    //      [
+    // {
+    //     name: 'AddDepartment',
+    //     message: 'Please enter the name of the new department',
+    //     type: 'input',
+    // },
+    //      ]
         this.addaRole = [
     {
         name: 'EmployeeName',

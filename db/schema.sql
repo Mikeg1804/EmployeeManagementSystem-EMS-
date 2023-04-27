@@ -42,13 +42,13 @@ CREATE TABLE salary (
     salarlyAmount VARCHAR(255) NOT NULL, 
     PRIMARY KEY (id)
 );
-CREATE TABLE finance (
-    id INT NOT NULL AUTO_INCREMENT,
-    department_id INT NOT NULL,
-    FOREIGN KEY department_id,
-    role TEXT NOT NULL,
-    employee_id INT NOT NULL,
-    FOREIGN KEY employee_id,
-    PRIMARY KEY (id)
-);
+-- CREATE TABLE finance (
+--     id INT NOT NULL AUTO_INCREMENT,
+--     department_id INT NOT NULL,
+--     FOREIGN KEY department_id,
+--     role TEXT NOT NULL,
+--     employee_id INT NOT NULL,
+--     FOREIGN KEY employee_id,
+--     PRIMARY KEY (id)
+-- );
 

@@ -2,15 +2,12 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-const {Options} = require('./lib');
-const department = require('./lib/index');
 
-// const {Square} = require('./Lib/shapes');
+const department = require('./lib/newDepartment');
+const employee = require('./lib/newEmployee');
+const role = require('./lib/newRole');
+const salary = require('./lib/newSalary');
 
-// const {Circle} = require('./Lib/shapes');
-
-
-// const Svg = require ('./Lib/svg');
 
 const x = [
     {
@@ -24,7 +21,7 @@ const x = [
           'Add a department',
           'Add a role',
           'Add an employee',
-          'Update an employee role',
+          'Add a salary',
         ]
     }, 
 
@@ -60,36 +57,34 @@ function init() {
         console.log(answers);
         let option 
         switch (answers.choices) {
-          // case 'View all department':
-          //   option = new ViewDepartment()
-          //   break;
-          // case 'View all roles':
-          //   option = new ViewAllRoles()
-          //   break;
-          // case 'View all employees':
-          //   option = new ViewAllEmployees()
-          //   break;
-          case 'Add a department':
-            option = new department()
+          case 'View all department':
+            option = new ViewDepartment()
             break;
-          // case 'Add a role':
-          //   option = new AddaRole()
-          //   break; 
-          // case 'Add an employee':
-          //   option = new AddanEmployee()
-          //   break;
-          // case 'Update an employee role':
-          //   option = new updateanemployeerole()
-          //   break;
+          case 'View all roles':
+            option = new ViewAllRoles()
+            break;
+          case 'View all employees':
+            option = new ViewAllEmployees()
+            break;
+          case 'Add a department':
+            option = new newDepartment()
+            break;
+          case 'Add a role':
+            option = new newRole()
+            break; 
+          case 'Add an employee':
+            option = new newEmployee()
+            break;
+          case 'Add a salary':
+            option = new newSalary()
+            break;            
           default:
             break;
         }
-    //   const svg = new Svg()
-    //   svg.setText(answers.LogoName,answers.TextColor)  
-    //   svg.setShape(shape)  
-        // writeToFile('LOGO.svg', svg.build())
+
+        // writeToFile('seeds.sql', fileGenerator(answers));
         
-        //     console.log('success');
+            console.log('success');
           });
 }
 
@@ -97,12 +92,11 @@ function init() {
 init();
 
 
-// // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(fileName, data)
-}
+};
 
-
+module.exports = writeToFile;
 
 
 
