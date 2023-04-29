@@ -23,7 +23,7 @@ CREATE TABLE employee (
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
     rol_id INT,
-    manager_id VARCHAR(INT),
+    manager_id INT,
     PRIMARY KEY (id),
     FOREIGN KEY (rol_id) REFERENCES rol(id)
 
